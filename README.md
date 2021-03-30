@@ -19,9 +19,9 @@ You only need the following steps:
 
 * Install dependencies with `yarn | npm install`
 * Compile the project with `yarn build | npm run build`
-* Run the software with `yarn start | npm run start` and an input argument `input=`
-  with the format `$name=$day$startAtTime-$endAtTime[,]...`. Or start it with the example data with
-  command `yarn start:example | npm run start:example`
+* Run the software with `yarn start | npm run start` can accept the following arguments:
+    * `path=[value]` to specify a path to a file with the input rows, by default uses `input-data.txt`
+    * `input=[value]` to specify an input row
 
 ### Formats
 

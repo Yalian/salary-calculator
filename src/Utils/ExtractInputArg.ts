@@ -1,3 +1,5 @@
+import {extractArguments} from "./ExtractArguments";
+
 type Days = "MO" | "TU" | "WE" | "TH" | "FR" | "SA" | "SU";
 
 type DaysInput = {
@@ -29,9 +31,9 @@ const extractData = (dataString: string = "") => {
 };
 
 export const extractInputArg = (rawArgs: string[]): ExtractedInputArg => {
-  const inputArg = rawArgs.find((arg) => arg.includes("input"));
+  const {input} = extractArguments()
 
-  const validation = validationPattern.exec(inputArg || "");
+  const validation = validationPattern.exec(input || "");
 
   if (!validation) {
     throw new Error(
@@ -39,7 +41,7 @@ export const extractInputArg = (rawArgs: string[]): ExtractedInputArg => {
     );
   }
 
-  const result = extractData(inputArg);
+  const result = extractData(input);
 
   return {
     name: validation.groups!.name,
