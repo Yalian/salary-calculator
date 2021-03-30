@@ -15,7 +15,7 @@ const CommandLineAdapter = () => {
 
   try {
     const { name: employeeName, days: workedDays } = extractInputArg();
-    console.log(employeeName)
+    console.log(employeeName);
 
     const employee = new Employee(new EmployeeName(employeeName));
     const daysWorked = workedDays.map(

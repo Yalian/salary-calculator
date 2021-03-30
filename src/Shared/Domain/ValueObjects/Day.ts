@@ -13,7 +13,7 @@ export class Day {
   }
 }
 
-type DayType = "MO" | "TU" | "WE" | "TH" | "FR" | "SA" | "SU";
+export type DayType = "MO" | "TU" | "WE" | "TH" | "FR" | "SA" | "SU";
 
 const availableDays: { [key in DayType]: boolean } = {
   MO: true,

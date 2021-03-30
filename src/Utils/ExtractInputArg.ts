@@ -1,4 +1,4 @@
-import {extractArguments} from "./ExtractArguments";
+import { extractArguments } from "./ExtractArguments";
 
 type Days = "MO" | "TU" | "WE" | "TH" | "FR" | "SA" | "SU";
 
@@ -31,7 +31,7 @@ const extractData = (dataString: string = "") => {
 };
 
 export const extractInputArg = (): ExtractedInputArg => {
-  const {input} = extractArguments()
+  const { input } = extractArguments();
 
   const validation = validationPattern.exec(input || "");
 
