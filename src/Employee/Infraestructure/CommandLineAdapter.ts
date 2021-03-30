@@ -1,6 +1,6 @@
 import { CalculateAmountToPay } from "../Application/UseCases/CalculateAmountToPay";
 import { JsonRateRepository } from "../../Rate/Infraestructure/JsonRateRepository";
-import { extractInputArg } from "../../Utils/extractInputArg";
+import { extractInputArg } from "../../Utils/ExtractInputArg";
 import { Employee } from "../Domain/Employee";
 import { EmployeeName } from "../Domain/ValueObjects/EmployeeName";
 import { TimeWorked } from "../../TimeWorked/Domain/TimeWorked";
