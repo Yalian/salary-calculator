@@ -35,7 +35,7 @@ export const extractInputArg = (rawArgs: string[]): ExtractedInputArg => {
 
   if (!validation) {
     throw new Error(
-      "Input argument have not correct format, ex: input=$name=$day:$startAt-$endAt[,]..."
+      "Input argument have not correct format, ex: input=$name=$day$startAt-$endAt[,]..."
     );
   }
 
