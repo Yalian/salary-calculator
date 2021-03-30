@@ -3,7 +3,7 @@ export class Day {
 
   constructor(value: string) {
     if (!availableDays[value as DayType]) {
-      throw new Error(`${value} is not available`);
+      throw new Error(`${value} day is not supported`);
     }
     this._value = value as DayType;
   }
