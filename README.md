@@ -10,7 +10,8 @@ on day of the week and section of the day
 This project use as infrastructure the pattern of
 design [Domain Driven Design](https://en.wikipedia.org/wiki/Domain-driven_design)
 to maintain the business logic decoupled from entry points like command line, and having the core logic protected from
-any change of third parties this makes the software more scalable in the future.
+any change of third parties this makes the software more scalable in the future and for the development flow use tdd to
+secure every step in development.
 
 ## Getting Started
 
@@ -19,7 +20,8 @@ You only need the following steps:
 * Install dependencies with `yarn | npm install`
 * Compile the project with `yarn build | npm run build`
 * Run the software with `yarn start | npm run start` and an input argument `input=`
-  with the format `$name=$day$startAtTime-$endAtTime[,]...`.
+  with the format `$name=$day$startAtTime-$endAtTime[,]...`. Or start it with the example data with
+  command `yarn start:example | npm run start:example`
 
 ### Formats
 
