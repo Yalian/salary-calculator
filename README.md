@@ -14,12 +14,18 @@ any change of third parties this makes the software more scalable in the future.
 
 ## Getting Started
 
-TO run the project just need to use the command `yarn start | npm run start` with an input argument `input=`
-with the format `$name=$day$startAtTime-$endAtTime[,]...`.
+You only need the following steps:
 
-the time is a militar hour format, ex `07:00-24:00`
+* Install dependencies with `yarn | npm install`
+* Compile the project with `yarn build | npm run build`
+* Run the software with `yarn start | npm run start` and an input argument `input=`
+  with the format `$name=$day$startAtTime-$endAtTime[,]...`.
 
-The available format for day inputs are:
+### Formats
+
+Time format: militar hour format, ex `07:00-24:00`
+
+Days
 
 * MO: Monday
 * TU: Tuesday
