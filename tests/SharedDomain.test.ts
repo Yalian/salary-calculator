@@ -6,7 +6,7 @@ describe("Test shared domain modales", () => {
 
     expect(() => {
       new Day(day);
-    }).toThrowError(`${day} is not available`);
+    }).toThrowError(`${day} day is not supported`);
   });
 
   it("should return a Day class with a given day in correct format", function () {

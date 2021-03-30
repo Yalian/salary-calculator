@@ -13,10 +13,9 @@ const CommandLineAdapter = () => {
     jsonDatabaseRepository
   );
 
-  const rawInputs = process.argv;
-
   try {
-    const { name: employeeName, days: workedDays } = extractInputArg(rawInputs);
+    const { name: employeeName, days: workedDays } = extractInputArg();
+    console.log(employeeName)
 
     const employee = new Employee(new EmployeeName(employeeName));
     const daysWorked = workedDays.map(

@@ -2,23 +2,21 @@ import { extractInputArg } from "../src/Utils/ExtractInputArg";
 
 describe("Test the extraction of arguments from command-line", () => {
   it("should throw an error when the format is incorrect", () => {
-    const processMock = {
-      argv: [
-        "input=MO10:00-12:00,TU10:00-12:00,TH01:00-03:00,SA14:00-18:00,SU20:00-21:00",
-      ],
-    };
+    const processArgvMock = [
+      "input=MO10:00-12:00,TU10:00-12:00,TH01:00-03:00,SA14:00-18:00,SU20:00-21:00",
+    ];
+    process.argv = processArgvMock;
 
-    expect(() => extractInputArg(processMock.argv)).toThrowError(
+    expect(() => extractInputArg()).toThrowError(
       "Input argument have not correct format"
     );
   });
 
   it("should extract the input argument from given raw arguments with correct format", () => {
-    const processMock = {
-      argv: [
-        "input=RENE=MO10:00-12:00,TU10:00-12:00,TH01:00-03:00,SA14:00-18:00,SU20:00-21:00",
-      ],
-    };
+    const processArgvMock = [
+      "input=RENE=MO10:00-12:00,TU10:00-12:00,TH01:00-03:00,SA14:00-18:00,SU20:00-21:00",
+    ];
+    process.argv = processArgvMock;
 
     const expectedResult = {
       name: "RENE",
@@ -51,6 +49,6 @@ describe("Test the extraction of arguments from command-line", () => {
       ],
     };
 
-    expect(extractInputArg(processMock.argv)).toStrictEqual(expectedResult);
+    expect(extractInputArg()).toStrictEqual(expectedResult);
   });
 });

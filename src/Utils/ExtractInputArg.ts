@@ -10,7 +10,7 @@ type DaysInput = {
 
 type ExtractedInputArg = { name: string; days: DaysInput[] };
 
-const validationPattern = /^input=(?<name>\w+)=(\w{2}\d{2}:\d{2}-\d{2}:\d{2},?)+$/;
+const validationPattern = /^(?<name>\w+)=(\w{2}\d{2}:\d{2}-\d{2}:\d{2},?)+$/;
 
 const dataPattern = /(?<day>\w{2})(?<start>\d{2}:\d{2})-(?<end>\d{2}:\d{2})+/gm;
 
@@ -30,7 +30,7 @@ const extractData = (dataString: string = "") => {
   return data;
 };
 
-export const extractInputArg = (rawArgs: string[]): ExtractedInputArg => {
+export const extractInputArg = (): ExtractedInputArg => {
   const {input} = extractArguments()
 
   const validation = validationPattern.exec(input || "");
