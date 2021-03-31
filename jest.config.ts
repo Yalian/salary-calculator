@@ -9,6 +9,11 @@ const config: Config.InitialOptions = {
     ],
     testMatch:[
         "**/?(*.)test.ts"
+    ],
+    collectCoverage: true,
+    coverageReporters:[
+        "html",
+        "lcov"
     ]
 };
 

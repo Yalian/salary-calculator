@@ -1,3 +1,5 @@
+[![codecov](https://codecov.io/gh/Yalian/salary-calculator/branch/master/graph/badge.svg?token=0NK0CHCN3M)](https://codecov.io/gh/Yalian/salary-calculator)
+
 # Employee Salary Calculator
 
 ## Description
